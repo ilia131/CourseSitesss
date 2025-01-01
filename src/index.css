@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'BYekan';
+    src: url('../src/assets/fonts/BYekan+.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: 'BYekan1';
+    src: url(../src/assets/Fonts/BYekan_0.ttf);
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'BYekan-bold';
+    src: url('../src/assets/fonts/BYekan-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display:swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'BYekan';
+    src: url('../src/assets/fonts/BYekan+.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: 'BYekan-bold';
+    src: url('../src/assets/fonts/BYekan-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display:swap;
+}
+
+
+@layer utilities {
+    .bg-custom-gradient {
+      background: linear-gradient(256.47deg, rgba(1, 206, 201, 0.225) 19.45%, rgba(228, 137, 0, 0.15) 72.46%);
+    }
+    .bg-gradient-custom2 {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #bbbbbb 100%) !important;
+      }
+  }
+
+
+:root{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    --font-regular:'BYekan-bold'
+}
+
+
+
+
+:root::-webkit-scrollbar{
+    width: 8px;
+    position: fixed;
+    
+}
+  
+:root::-webkit-scrollbar-thumb{
+    background: #01CEC9;
+}
+  
+  
+  
+  
+
