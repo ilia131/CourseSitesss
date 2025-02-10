@@ -18,10 +18,9 @@ import router from './config/router/router.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render( 
    <BgColorProvider >
     <DarkModeProvider>
-      <AuthProvider >
-      <ChatProvider >
-          <Toaster />
-  
+        <AuthProvider >
+           <ChatProvider >
+             <Toaster />
               <RouterProvider  router={router}  />
           </ChatProvider>
      </AuthProvider>

@@ -13,7 +13,6 @@ const Landing = () => {
        <BestTeacher />
        <ServicesSection /> 
       <ArticleSection /> 
-      <PodCastSection />      
    </Fragment>
   )
 }

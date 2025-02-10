@@ -132,7 +132,7 @@ const textColor = getComplementaryColor(bgColor);
   return (
     <Formik>
     <div className="overflow-visible font-primaryRegular text-black  justify-center dark:bg-gray-800 pt-[77px] pb-4"
-           style={{ backgroundColor: bgColor }}
+          //  style={{ backgroundColor: bgColor }}
 
     
     >

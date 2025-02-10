@@ -113,7 +113,7 @@ const NewsDetail = () => {
     <>
     
        <div className="w-full h-full flex font-primaryMedium justify-center dark:bg-gray-800 pt-[40px]"
-             style={{ backgroundColor: bgColor }}
+            //  style={{ backgroundColor: bgColor }}
 
        >
           

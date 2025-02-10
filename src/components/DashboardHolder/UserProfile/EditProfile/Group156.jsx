@@ -42,7 +42,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                               '
                             />
                                <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                        style={{borderColor:bgColor}}
+                                        // style={{borderColor:bgColor}}
 
                                >
                                 <ErrorMessage name="LName" component="div" 
@@ -71,7 +71,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                             />
                               <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
                               
-                              style={{borderColor:bgColor}}
+                              // style={{borderColor:bgColor}}
                               >
                                 <ErrorMessage name="FName" component="div" 
                                 className="text-red-500 font-primaryMedium text-sm"
@@ -142,7 +142,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                               '
                             />
                                 <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                                                style={{borderColor:bgColor}}
+                                                                // style={{borderColor:bgColor}}
 
                                 >
                                 <ErrorMessage name="NationalCode" component="div" 
@@ -176,7 +176,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                               '
                             />
                              <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                                             style={{borderColor:bgColor}}
+                                                            //  style={{borderColor:bgColor}}
 
                              >
                                 <ErrorMessage name="phonenumber" component="div" 
@@ -208,7 +208,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                           
                              </div>   
                              <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                                             style={{borderColor:bgColor}}
+                                                            //  style={{borderColor:bgColor}}
 
                              >
                                 <ErrorMessage name="BirthDay" component="div" 
@@ -239,7 +239,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                               '
                             />
                              <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                                             style={{borderColor:bgColor}}
+                                                            //  style={{borderColor:bgColor}}
 
                              >
                                 <ErrorMessage name="TelegramLink" component="div" 
@@ -268,7 +268,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                               '
                             />
                              <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                                             style={{borderColor:bgColor}}
+                                                            //  style={{borderColor:bgColor}}
 
                              >
                                 <ErrorMessage name="email" component="div" 
@@ -306,7 +306,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                               '
                             />
                               <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                                              style={{borderColor:bgColor}}
+                                                              // style={{borderColor:bgColor}}
 
                               >
                                 <ErrorMessage name="LinkdinProfile" component="div" 
@@ -346,7 +346,7 @@ const Group156 = ({setFieldValue ,bgColor}) => {
                               '
                             />
                               <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800"
-                                                              style={{borderColor:bgColor}}
+                                                              // style={{borderColor:bgColor}}
 
                               >
                                 <ErrorMessage name="HomeAdderess" component="div" 

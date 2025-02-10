@@ -53,13 +53,13 @@ const ProfileInfo = ({HandleActive , bgColor , textColor}) => {
          max-xl:flex
          max-xl:justify-center
          "
-         style={{borderColor:bgColor}}
+         // style={{borderColor:bgColor}}
          >
            <div className='w-[50px] h-[50px] xl:left-[719px] absolute z-[555] dark:bg-gray-800 
           justify-center flex flex-col items-center gap-[2px]  shadow-[0px_1px_2px_0px_#00000040]
           rounded-[10px] bg-[#F7F7F7]
         '
-        style={{backgroundColor:bgColor}}
+      //   style={{backgroundColor:bgColor}}
 
         >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,8 @@ const ProfileInfo = ({HandleActive , bgColor , textColor}) => {
                                  max-xl:px-[100px]
                                  max-xl:gap-[50px]
                                  bg-[#F6FFFF] max-smx3:gap-[30px]' 
-          style={{direction:'rtl', backgroundColor:bgColor}}
+          style={{direction:'rtl', }}
+         //  backgroundColor:bgColor
          >  
          <div className='flex-col flex gap-[35px] mt-[-2px] ' style={{direction:'rtl'}}>
                <div className='flex gap-[4px]'>

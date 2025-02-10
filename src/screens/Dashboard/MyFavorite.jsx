@@ -23,7 +23,6 @@ const Favorite = () => {
   }
 
 
-  console.log(row3)
   useEffect(()=> {
     getFavoriteCourse1()
   }, [])
@@ -33,7 +32,7 @@ const Favorite = () => {
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
   const currentItems = row3.slice(indexOfFirstItem, indexOfLastItem)
-  console.log(row3)
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
   return (
@@ -68,13 +67,13 @@ const Favorite = () => {
                 ">عنوان</p>
               </div>
               <div className="w-[874px] flex-col pt-[3px]" >
-              {loading ? (
+              {loading > 0? (
         <ul>
-          {Array(10).fill().map((_, index) => (
+         {Array(10).fill().map((_, index) => (
             <li key={index}>
               <Skeleton height={40} width={`100%`}  />
             </li>
-          ))}
+          ))} 
         </ul>
       ) : (
        <div>

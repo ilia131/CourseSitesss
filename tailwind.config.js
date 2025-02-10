@@ -3,6 +3,7 @@ import { Slider } from 'antd';
 /** @type {import('tailwindcss').Config} */
 const flowbite = require("flowbite-react/tailwind");
 
+const withRTL = require("tailwindcss-rtl");
 
 export default {
   darkMode: 'class',
@@ -87,6 +88,7 @@ export default {
   },
   plugins: [
     require('daisyui'),
+
     flowbite.content(),
   ],
 }

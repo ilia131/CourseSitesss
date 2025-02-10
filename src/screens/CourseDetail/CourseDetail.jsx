@@ -103,7 +103,7 @@ const CourseDetail = () => {
   return (
     <>
    <div dir="rtl" className="  font-['BYekan'] bg-[#F9F9F9] dark:bg-gray-800 "
-                style={{ backgroundColor: bgColor }}
+                // style={{ backgroundColor: bgColor }}
 
    >
      

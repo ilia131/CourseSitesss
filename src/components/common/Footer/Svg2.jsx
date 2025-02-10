@@ -1,6 +1,7 @@
 
 const Svg2 = () => {
   return (  
+    <div className='relative' >
     <svg viewBox="0 0 1440 364" fill="none" xmlns="http://www.w3.org/2000/svg"
     className="absolute  w-full h-[318px] top-[45px] max-md:hidden
      md:hidden 
@@ -19,6 +20,7 @@ const Svg2 = () => {
     </filter>
     </defs>
     </svg>
+    </div>
   )
 }
 

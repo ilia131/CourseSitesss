@@ -30,7 +30,7 @@ const MainLayout = () => {
     <HeaderDashboard />
     </div>
     <div className='flex justify-center dark:bg-gray-800 max-md:h-screen'
-                    style={{ backgroundColor: bgColor }}
+                    // style={{ backgroundColor: bgColor }}
 
     >
       <div className='xl:w-[1250px] md:mt-[144px] md:mb-[67px] flex justify-between xl:h-[813px]'>

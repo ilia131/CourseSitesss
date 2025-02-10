@@ -54,7 +54,7 @@ const Register = () => {
 
  return (
     <div className='w-full h-screen relative ' 
-    style={{backgroundColor:bgColor}}
+    // style={{backgroundColor:bgColor}}
 
     >
      <div className='w-[952px] h-[631px]  pt-[80px] mb-[166px] ml-[285px] mr-[203px]
@@ -71,8 +71,10 @@ const Register = () => {
         >
                      
                      {isConfirm? 
-                     ( account? ( <RegisterStep3 vle={vle} />) : (<RegisterStep2 HandleAccount1={HandleAccount1} vle={vle} />))  
-                     :   ( <RegisterStep1 HandleConfirm={HandleConfirm}
+                     ( account? ( <RegisterStep3 vle={vle} />) : 
+                     (<RegisterStep2 HandleAccount1={HandleAccount1} vle={vle} />))  
+                     :   
+                     ( <RegisterStep1 HandleConfirm={HandleConfirm}
                            HandleSubmit1={HandleSubmit1} 
                      />) }
           
@@ -112,7 +114,6 @@ const Register = () => {
              <NavLink className='font-primaryRegular mb-[3px] text-[20px]'
              to={'/'}
              style={{justifyContent:'right' ,
-              color: bgColor === "" ? '#555555': textColor
                }}
              >صفحه اصلی</NavLink>    
           </div>

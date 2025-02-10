@@ -42,7 +42,7 @@ const textColor = getComplementaryColor(bgColor);
     <Fragment >
           <ToastContainer  />
      <div className='w-full h-screen relative dark:bg-gray-800'
-     style={{backgroundColor:bgColor}}
+    //  style={{backgroundColor:bgColor}}
      >
      <div className='w-[952px] h-[631px] pt-[50px]  mb-[166px] ml-[285px] mr-[203px]
      flex'>
@@ -85,9 +85,9 @@ const textColor = getComplementaryColor(bgColor);
           </div>  
            <NavLink className='font-primaryRegular mb-[3px] text-[20px]'
            to={'/'}
-           style={{justifyContent:'right' ,
-            color: bgColor === "" ? '#555555': textColor
-             }}>صفحه اصلی</NavLink>    
+           style={{justifyContent:'right' 
+            }}>صفحه اصلی</NavLink>    
+            {/* color: bgColor === "" ? '#555555': textColor  */}
         </div>
         )}    
          </div>

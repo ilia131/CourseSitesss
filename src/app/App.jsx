@@ -1,12 +1,6 @@
-// import Layout from '../components/Layout'
 
 import React, { Fragment, Suspense, lazy , useState, useEffect} from 'react';
 import ReactLoading from "react-loading";
-// import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';  
-
-
-
-
 
 
 function App() {

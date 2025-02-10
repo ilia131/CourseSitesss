@@ -48,7 +48,7 @@ const News = () => {
   
       <div className="w-[100%]   flex flex-wrap relative bg-NewsBg bg-[#F9F9F9] dark:bg-gray-800 font-primaryRegular"
       
-      style={{ backgroundColor: bgColor }}
+      // style={{ backgroundColor: bgColor }}
 
       >
         

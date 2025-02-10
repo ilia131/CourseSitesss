@@ -131,7 +131,7 @@ const ImageField1 = ({previewImage ,  handleFileChange , fileInputRef , setPrevi
             <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800
                                             max-md:w-[150px]
                                             "
-                                            style={{borderColor:bgColor}}
+                                            // style={{borderColor:bgColor}}
 
                                             >
                     <ErrorMessage name="img" component="div" 

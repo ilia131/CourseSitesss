@@ -3,37 +3,23 @@ import { useBgColor } from '../../BgChangeAdmin/BgColorContext';
 import SearchForm from '../../common/SearchForm/SearchForm'
 import { getHeroDetail } from '../../../core/services/api/Hero';
 import { useEffect, useState } from 'react';
-
-
+import useHero from '../../common/hooks/hookapi/useHero';
+import { ClipLoader } from "react-spinners";
+import Loading from '../../common/Loading/Loading';
+import ErrorComponent from '../../common/ErrorComponent/ErrorComponent';
 
 
 
 const HeroSection = () => {
-   const [hero , setHero] = useState([])
-  
-   const GetH5 = async () => {
-     const data = await getHeroDetail()
-     setHero(data)
-   }
+  const { hero, loading, error } = useHero();
 
-   useEffect(()=> {
-     GetH5()
-   }, [])
+  if (loading) {
+    return  <Loading loading={loading}/> 
+  }
+  if (error) {
+    return <ErrorComponent error={error} />
+  }
 
-
-
-  const { bgColor , setBgColor} = useBgColor();
-  const getComplementaryColor = (hexColor) => {
-    const color = hexColor.replace("#", "");
-    
-    const r = 255 - parseInt(color.substring(0, 2), 16);
-    const g = 255 - parseInt(color.substring(2, 4), 16);
-    const b = 255 - parseInt(color.substring(4, 10), 16);
-  
-    return `rgb(${r}, ${g}, ${b})`;
-  };
-  
-  const textColor = getComplementaryColor(bgColor);
 
   const formStyle =`w-[416.34px] h-[64.81px] ml-[40.8px]
                     shadow-lg pl-[6.3px] rounded-[35px] 
@@ -70,16 +56,8 @@ const HeroSection = () => {
                                       smx:h-[49.94px]
                                       smx:w-[48.57px] `                    
   return (
-    <section className='h-[652px] flex justify-center   dark:bg-gray-800 '
-    style={{backgroundColor:bgColor}}
-    >
-        <div className='h-[625px] flex max-md:w-full max-lg:w-full
-                        w-[1247px] pt-[11px] max-md:justify-end mt-[1px] 
-                        justify-between 
-                        max-lg:justify-end 
-                        max-md:px-[10px]
-                        max-lg:px-[60px]
-                        xl:pt-[11px]
+    <section className='h-[652px] flex justify-center   dark:bg-gray-800 '>
+        <div className='h-[625px] flex max-md:w-full max-lg:w-full w-[1247px] pt-[11px] max-md:justify-end mt-[1px] justify-between max-lg:justify-end max-md:px-[10px] max-lg:px-[60px] xl:pt-[11px]
                         xl:px-0
                         xl:w-[1247px]
                         xl:justify-between
@@ -92,15 +70,8 @@ const HeroSection = () => {
                         duration-700
                         '>
          <div className="w-[604px] h-[447px] mt-[88px] mb-[36px] ml-[107px] max-md:hidden max-lg:hidden">
-            <div className='relative right-[60px] top-[1px] 
-                                     w-[604.3px] h-[447px]
-                                     lg:w-[500px]
-                                     xl:w-[604px]
-                                     '>
-               <img 
-                 src={images.shape}
-            
-               />
+            <div className='relative right-[60px] top-[1px] w-[604.3px] h-[447px] lg:w-[500px] xl:w-[604px]'>
+               <img src={images.shape}/>
             </div>
                <div className='w-[200px] h-[139px] drop-shadow-lg
                                  max-lg:hidden   
@@ -168,7 +139,8 @@ const HeroSection = () => {
                            height={45}  
                       />
                </div>
-               <p style={{direction:'rtl'}} 
+               <p   dir="rtl"
+
                       className='xl:w-[200px] xl:h-[105px] 
                                  shadow-lg text-center items-center 
                                  flex justify-center pt-[10px] rounded-[10px]
@@ -216,8 +188,7 @@ const HeroSection = () => {
 
                                                  "
                  
-                                                 style={{color: bgColor === "" ? '#555555': textColor
-                                                 }}
+                                               
                  >مرجع اموزش زنده و تعاملی برنامه نویسی حوزه وب 
                 <br/>
                  با دسترسی به بیش از هفت هزار ویدیوی اموزشی به زبان فارسی

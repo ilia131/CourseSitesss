@@ -56,7 +56,7 @@ const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChang
                                             <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800
                                             max-md:w-[150px]
                                             "
-                                            style={{borderColor:bgColor}}
+                                            // style={{borderColor:bgColor}}
 
                                             >
                                                 <ErrorMessage name="َUserAbout" component="div" 

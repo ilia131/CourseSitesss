@@ -18,7 +18,7 @@ const DashCard = ({namedore, time , img, teacher , bgColor}) => {
                                  dark:bg-gray-800
                                   max-md:px-[12px]
                                    '
-                                   style={{ backgroundColor: bgColor }}
+                                  //  style={{ backgroundColor: bgColor }}
 
                                    >
                          <div className='flex gap-[12px]'>
