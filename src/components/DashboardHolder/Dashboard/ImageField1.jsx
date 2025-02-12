@@ -6,7 +6,6 @@ import toast from 'react-hot-toast';
 
 const ImageField1 = ({previewImage ,  handleFileChange , fileInputRef , setPreviewImage , userInfo , setRefetch
 
-  ,bgColor
 }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [previewImage1 , setPreviewImage1] = useState(images.profilepic)

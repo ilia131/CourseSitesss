@@ -4,36 +4,15 @@ import CourseSearch from "../../components/Courses/CourseSearch"
 
 import { useState , useEffect } from "react"
 import "../../components/Courses/Course.css"
-import "./RangeSlider.css"
 import SideBarFilter from "../../components/Courses/SideBarFilter"
 import FinalList from "../../components/Courses/FinalList"
 import FinalGrid from "../../components/Courses/FinalGrid"
 import { getTech , getAllCourse, getCourseType, filterByTypeCourse, filterByLevelCourse, filterbyCostdp } from "../../core/services/api/course"
 
-import { useBgColor } from "../../components/BgChangeAdmin/BgColorContext"
 
 
 
 const Courses = () => {
-  const { bgColor , setBgColor} = useBgColor();
-
-
-const getComplementaryColor = (hexColor) => {
-  const color = hexColor.replace("#", "");
-  
-  const r = 255 - parseInt(color.substring(0, 2), 16);
-  const g = 255 - parseInt(color.substring(2, 4), 16);
-  const b = 255 - parseInt(color.substring(4, 10), 16);
-
-  return `rgb(${r}, ${g}, ${b})`;
-};
-
-const textColor = getComplementaryColor(bgColor);
-
-
-
-
-
   const [active, setActive]=useState(1)
   const [check , setCheck] = useState([])
   const [checkbox, setCheckbox] = useState(false)
@@ -131,11 +110,7 @@ const textColor = getComplementaryColor(bgColor);
   } , [minValue, maxValue])
   return (
     <Formik>
-    <div className="overflow-visible font-primaryRegular text-black  justify-center dark:bg-gray-800 pt-[77px] pb-4"
-          //  style={{ backgroundColor: bgColor }}
-
-    
-    >
+      <div className="overflow-visible font-primaryRegular text-black  justify-center dark:bg-gray-800 pt-[77px] pb-4">
         <CourseSearch/>
         <div className="flex mx-auto w-[92%] justify-center gap-[40px]  dark:bg-gray-800 mt-10 ">
           <div className=" lg:w-[72%] cd:w-[94%] ">
@@ -155,15 +130,10 @@ const textColor = getComplementaryColor(bgColor);
                   </div>                  
                 </div>
             <div className="mb-[200px]">
-              {active?<FinalGrid 
-                slidercard={slidercard}
-                setActive={setActive} />  :<FinalList
-                slidercard={slidercard}
-                />
-                }
-                </div>
+              {active?<FinalGrid  slidercard={slidercard} setActive={setActive} />  : <FinalList slidercard={slidercard}/>}
+            </div>
           </div>
-          <SideBarFilter HandleCheck={HandleCheck}
+        <SideBarFilter HandleCheck={HandleCheck}
           handleChange={handleChange}
           handleChange1={handleChange1}
           check={check}

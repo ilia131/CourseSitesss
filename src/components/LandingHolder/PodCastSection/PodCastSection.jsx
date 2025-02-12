@@ -1,5 +1,4 @@
 import images from '../../../assets/landingpng'
-import { useBgColor } from '../../BgChangeAdmin/BgColorContext';
 
 const PodCastSection = () => {
 

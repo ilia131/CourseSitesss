@@ -3,29 +3,12 @@ import images from '../../assets/Register'
 import { useState } from 'react';
 import { registerLevel1 } from "../../core/services/api/register"
 import { registerLevel3 } from '../../core/services/api/register';
-import { useBgColor } from '../../components/BgChangeAdmin/BgColorContext.jsx';
 import RegisterStep2 from '../../components/Registerholding/RegisterStep2.jsx';
 import RegisterStep1 from '../../components/Registerholding/RegisterStep1.jsx';
 import RegisterStep3 from '../../components/Registerholding/RegisterStep3.jsx';
 import { NavLink } from 'react-router-dom';
 const Register = () => {
-  const { bgColor , setBgColor} = useBgColor();
-  const getComplementaryColor = (hexColor) => {
-    const color = hexColor.replace("#", "");
-    
-    const r = 255 - parseInt(color.substring(0, 2), 16);
-    const g = 255 - parseInt(color.substring(2, 4), 16);
-    const b = 255 - parseInt(color.substring(4, 10), 16);
-  
-    return `rgb(${r}, ${g}, ${b})`;
-  };
-  
-  
-  
-  
-  
-  
-  const textColor = getComplementaryColor(bgColor);
+
 
  const [isConfirm , setIsConfirm] = useState(false)
  const [account , setAccount] = useState(false)   

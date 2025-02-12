@@ -1,5 +1,4 @@
 import images from '../../../assets/landingpng'
-import { useBgColor } from '../../BgChangeAdmin/BgColorContext';
 import SearchForm from '../../common/SearchForm/SearchForm'
 import { getHeroDetail } from '../../../core/services/api/Hero';
 import { useEffect, useState } from 'react';

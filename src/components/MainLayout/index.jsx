@@ -4,24 +4,11 @@ import images from '../../assets/dashboardpng'
 import Header from '../common/Header/Header'
 import { Fragment } from "react"
 import HeaderDashboard from "../common/HeaderDashboard/HeaderDashboard"
-import { useBgColor } from '../../components/BgChangeAdmin/BgColorContext.jsx'
 
 
 
 const MainLayout = () => {
-  const { bgColor , setBgColor} = useBgColor();
 
-
-  const getComplementaryColor = (hexColor) => {
-    const color = hexColor.replace("#", "");
-    
-    const r = 255 - parseInt(color.substring(0, 2), 16);
-    const g = 255 - parseInt(color.substring(2, 4), 16);
-    const b = 255 - parseInt(color.substring(4, 10), 16);
-  
-    return `rgb(${r}, ${g}, ${b})`;
-  };
-  const textColor = getComplementaryColor(bgColor);
   
   return (
   <Fragment>

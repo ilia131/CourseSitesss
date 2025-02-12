@@ -3,7 +3,7 @@ import ImageField1 from '../../Dashboard/ImageField1'
 import MapReact1 from '../../Dashboard/MapReact1'
 import { Field , ErrorMessage} from 'formik'
 const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChange , handleImageClick
-    ,setFieldValue , userInfo , setRefetch , bgColor
+    ,setFieldValue , userInfo , setRefetch 
 }) => {
   // const handleMapClick = () => {
   //     setValueField("location.lat", selectedCoords.lat);
@@ -26,7 +26,6 @@ const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChang
                                             setPreviewImage={setPreviewImage}
                                             userInfo={userInfo}
                                             setRefetch={setRefetch}
-                                            bgColor={bgColor}
                                   /> 
                                       <div className='mt-[-36px] relative top-[5px]' >
                                           <label className='text-[#979797] font-primaryMedium

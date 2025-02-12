@@ -1,10 +1,16 @@
-import Group73 from "./Group73"
-import Group74 from "./Group74"
-import Group85 from "./Group85"
+import PercentProfileComponent from "./UserPanel/PercentProfileComponent"
+import AllCourseCard from "./UserPanel/AllCourseCard"
+import DashboardNews from "./DashboardNews"
 import DashCard from "./DashCard"
+import UserPanelUpper from "./UserPanelUpper"
+import CoursesLists from "./AllCoursesList"
+import DashboardLayout from "./DashboardLayout"
 export {
-   Group73,
-   Group74,
-   Group85,
+   PercentProfileComponent,
+   AllCourseCard,
+   DashboardNews,
    DashCard,
+   UserPanelUpper,
+   CoursesLists,
+   DashboardLayout,
 }

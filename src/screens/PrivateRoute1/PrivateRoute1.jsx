@@ -1,6 +1,5 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../../components/Authenticated/Authenticated";
 import { getItem } from "../../core/services/common/storage.services";
 const PrivateRoute1 = ({ children }) => {
   const token = getItem("token")

@@ -1,12 +1,9 @@
 import { Fragment } from "react"
-import images from '../../../assets/dashboardpng'
 import moment from 'moment-jalaali';
+import toPersianDate from '../../../components/common/utils/ToPersianDate'
 
-const toPersianDate = (date) => {
-  return moment(date).format('jYYYY/jMM/jDD');
-};
 
-const DashCard = ({namedore, time , img, teacher , bgColor}) => {
+const DashCard = ({namedore, time , img, teacher }) => {
   return (
     <Fragment>
         <div className='xl:w-[342px] h-[76px]  flex rounded-[10px]
@@ -18,8 +15,6 @@ const DashCard = ({namedore, time , img, teacher , bgColor}) => {
                                  dark:bg-gray-800
                                   max-md:px-[12px]
                                    '
-                                  //  style={{ backgroundColor: bgColor }}
-
                                    >
                          <div className='flex gap-[12px]'>
                           

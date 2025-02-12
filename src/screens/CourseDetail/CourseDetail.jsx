@@ -9,29 +9,14 @@ import {getCommentById, getCourseDetail, getCourseList , postComment , ReserveCo
 import { useParams } from 'react-router-dom';
 import { IoMdClose } from "react-icons/io";
 import * as Yup from "yup";
-import { useBgColor } from "../../components/BgChangeAdmin/BgColorContext.jsx";
 
 import {Formik , Form , Field} from 'formik'
-import { setItem } from "../../core/services/common/storage.services.js";
+import { setItem } from "../../core/services/common/storage.services";
 
 
 
 const CourseDetail = () => {
-  const { bgColor , setBgColor} = useBgColor();
-   
- 
-  
-  const getComplementaryColor = (hexColor) => {
-    const color = hexColor.replace("#", "");
-    
-    const r = 255 - parseInt(color.substring(0, 2), 16);
-    const g = 255 - parseInt(color.substring(2, 4), 16);
-    const b = 255 - parseInt(color.substring(4, 10), 16);
-  
-    return `rgb(${r}, ${g}, ${b})`;
-  };
-  
-  const textColor = getComplementaryColor(bgColor);  
+
   const [detail , setDetail] = useState([])
   const [cards , setCards] = useState([])
   const [comment , setComment] = useState([])
