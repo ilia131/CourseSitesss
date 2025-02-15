@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({ label, icon, onClick }) => (
       width={25} 
       height={25} 
       className='mb-[3px]' 
-      alt="button icon" // اضافه کردن ویژگی alt برای بهبود دسترسی و رعایت قوانین دسترسی
+      alt="button icon" 
     />
     <p className='w-[90px] h-[23px] mt-[5px] mb-[10px] flex items-center justify-center max-md:font-primaryMedium'>
       {label}
