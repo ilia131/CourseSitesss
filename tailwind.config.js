@@ -46,7 +46,8 @@ export default {
         'custom-gradient': 'linear-gradient(180deg, rgba(0, 252, 246, 0.8) -80.75%, rgba(0, 43, 42, 0.8) 100%)',
         'custom-blur':'backdrop-filter: blur(5px)',
          'bglogin':'url("./src/assets/Login/bgloginbox.svg")',
-         'bgloginmain':'url("./src/assets/Login/bglogin.svg")'
+         'bgloginmain':'url("./src/assets/Login/bglogin.svg")',
+         'catItem': 'url("./src/assets/landingpng/Rectangle-15.svg")'
       },
       gradientColorStopPositions: {
         33: 'background: linear-gradient(230.15deg, rgba(228, 137, 0, 0.15) 10.81%, rgba(1, 206, 201, 0.225) 86.96%)'

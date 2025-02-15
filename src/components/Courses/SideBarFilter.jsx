@@ -9,8 +9,6 @@ import { getCourseType , getCourseLevel } from "../../core/services/api/course"
 
 const SideBarFilter =({HandleCheck , check , handleChange , handleChange1
 , minValue , maxValue ,setMaxValue, setMinValue
-
-
 })=>{
   const [type , setType] = useState([])
   const [level , setLevel] = useState([])

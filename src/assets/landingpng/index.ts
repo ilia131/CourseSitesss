@@ -72,7 +72,7 @@ import rec668 from './Rectangle-14.svg';
 import rec669 from './Rectangle1433.svg';
 import elll from './Ellipse448.png';
 
-const images: { [key: string]: string } = {
+const images: Record<string, string> = {
   logo,
   fav,
   shopbag,

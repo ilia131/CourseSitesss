@@ -1,9 +1,9 @@
-import images from '../../../assets/landingpng'
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import SwiperComponent from "./SwiperComponent/SwiperComponent"
 import CourseLink from './CoursesPart/CourseLink';
-import CourseImage from './CoursesPart/CourseImage'
-const CourseSection = () => {
+import CourseImage from './CoursesPart/CourseImage';
+
+const CourseSection = ({images}) => {
   return (
     <section className="xl:justify-center dark:bg-gray-800 grid max-md:w-full sm1:w-full">
       <div className="xl:w-[1247px] justify-center grid max-md:w-full duration-700 xl:mt-[112px] max-md:mt-[20px]">

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment , useMemo } from 'react'
 
 const toPersianNumber = (number) => {
   const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
@@ -12,81 +12,64 @@ const toPersianNumber = (number) => {
 
 
 
-const PagiantionDashboard = ({ paginate, row, itemsPerPage, currentPage }) => {
+
+const PaginationDashboard = ({ paginate, row, itemsPerPage, currentPage }) => {
   const totalPages = Math.ceil(row.length / itemsPerPage);
 
-  const paginateWithFixedButtons = () => {
-    let pageNumbers = [];
-    let startPage = Math.max(currentPage - 2, 1);  
-    let endPage = Math.min(currentPage + 2, totalPages);  
-
-    if (endPage - startPage < 4) {
-      if (startPage > 1) {
-        startPage = endPage - 4;
-      } else {
-        endPage = startPage + 4;
-      }
+  const pageNumbers = useMemo(() => {
+    if (totalPages <= 5) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
     }
 
-    for (let i = startPage; i <= endPage; i++) {
-      pageNumbers.push(i);
+    let pages = [];
+    if (currentPage <= 3) {
+      pages = [1, 2, 3, 4, "...", totalPages];
+    } else if (currentPage >= totalPages - 2) {
+      pages = [1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
+    } else {
+      pages = [1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages];
     }
 
-    return pageNumbers;
-  };
-
-  const pageNumbers = paginateWithFixedButtons();
+    return pages;
+  }, [totalPages, currentPage]);
 
   return (
-    <Fragment>
-      <div className="flex gap-[10px]">
-        {/* دکمه صفحه قبلی */}
-        <div
-          className="w-[22px] h-[22px] rounded-full flex justify-center items-center text-[14px] text-[#333333] font-primaryRegular pr-[7px] pl-[6.16px] bg-[#FAFAFA] shadow-[0px_1px_2px_0px_#0000004D] cursor-pointer"
-          onClick={() => currentPage > 1 && paginate(currentPage - 1)}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-            <path
-              d="M5.18164 9.125L1.05664 5L5.18164 0.875"
-              stroke="#777777"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+    <div className="flex gap-[10px]">
+      <button
+        className="w-[22px] h-[22px] rounded-full flex justify-center items-center text-[14px] text-[#333333] font-primaryRegular bg-[#FAFAFA] shadow-md cursor-pointer"
+        onClick={() => paginate(Math.max(1, currentPage - 1))}
+        disabled={currentPage === 1}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+          <path d="M5.18164 9.125L1.05664 5L5.18164 0.875" stroke="#777777" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
 
-        {pageNumbers.map((page) => (
-          <button
-            key={page}
-            onClick={() => paginate(page)}
-            className={`w-[22px] h-[22px] rounded-full flex justify-center items-center shadow-[0px_1px_2px_0px_#0000004D] ${
-              currentPage === page ? 'bg-[#FFB800]' : 'bg-white'
-            } text-[14px] text-[#333333] font-primaryRegular pr-[7px] pl-[6.16px] cursor-pointer`}
-          >
-            <span className="w-[8.8px] h-[14.9px] flex justify-center items-center pb-[4px] mt-[1px]">
-              {toPersianNumber(page)}
-            </span>
-          </button>
-        ))}
-
-        <div
-          className="w-[22px] h-[22px] rounded-full flex justify-center items-center text-[14px] text-[#333333] font-primaryRegular pr-[7px] pl-[6.16px] bg-[#FAFAFA] shadow-[0px_1px_2px_0px_#0000004D] cursor-pointer"
-          onClick={() => currentPage < totalPages && paginate(currentPage + 1)}
+      {pageNumbers.map((page, index) => (
+        <button
+          key={index}
+          onClick={() => typeof page === "number" && paginate(page)}
+          className={`w-[22px] h-[22px] rounded-full flex justify-center items-center shadow-md text-[14px] font-primaryRegular cursor-pointer ${
+            currentPage === page ? "bg-[#FFB800] text-white" : "bg-white text-[#333333]"
+          }`}
+          disabled={page === "..."}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
-            <path
-              d="M1.33496 0.875L5.45996 5L1.33496 9.125"
-              stroke="#777777"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      </div>
-    </Fragment>
+          {toPersianNumber(page)}
+        </button>
+      ))}
+
+      <button
+        className="w-[22px] h-[22px] rounded-full flex justify-center items-center text-[14px] text-[#333333] font-primaryRegular bg-[#FAFAFA] shadow-md cursor-pointer"
+        onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
+        disabled={currentPage === totalPages}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
+          <path d="M1.33496 0.875L5.45996 5L1.33496 9.125" stroke="#777777" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+    </div>
   );
 };
 
-export default PagiantionDashboard;
+export default PaginationDashboard;
+

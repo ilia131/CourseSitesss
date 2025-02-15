@@ -4,7 +4,7 @@ import images from '../../assets/Login';
 import { setItem } from "../../core/services/common/storage.services";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { useLoginMutation } from '../../redux/services/apiSlice';
+import { useLoginMutation } from '../../redux/services/api/apiSlice';
 import LogoOne from "./LogoOne";
 import Fields from "./Fields";
 interface FormValues {

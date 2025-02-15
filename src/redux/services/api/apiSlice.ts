@@ -1,14 +1,11 @@
-import {  createApi ,  fetchBaseQuery ,FetchArgs, FetchBaseQueryError , BaseQueryFn } from '@reduxjs/toolkit/query/react'
-import { Mutex } from 'async-mutex'
-
+import {  createApi ,  fetchBaseQuery  } from '@reduxjs/toolkit/query/react'
+import  {apiInterceptor} from '../interceptor'
 interface LoginRequest {
     phoneOrGmail:string;
     password: string;
 }
 
-// interface Values {
-//     values: LoginRequest
-// }
+
 
 interface LoginResponse {
     id: string;
@@ -17,7 +14,6 @@ interface LoginResponse {
 
 }
 
-const mutex = new Mutex();
 
 // const baseURL = process.env.VITE_BASE_URL;
 
@@ -31,9 +27,7 @@ const mutex = new Mutex();
 
 export const apiSlice = createApi({
     reducerPath: 'api',
-    baseQuery: fetchBaseQuery({
-      baseUrl: 'https://classapi.sepehracademy.ir/api',
-    }),
+    baseQuery: apiInterceptor,
     endpoints: builder => ({
     login : builder.mutation<LoginResponse, LoginRequest>({
         query: (values) => ({
@@ -42,9 +36,12 @@ export const apiSlice = createApi({
             body: values
         }),
       }),
-    })
+    }),
+    
 })
 
+
+
 export const {
-  useLoginMutation
+  useLoginMutation,
 } = apiSlice

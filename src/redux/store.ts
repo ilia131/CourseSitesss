@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from "./features/authSlice";
-import { apiSlice } from './services/apiSlice';
+import { apiSlice } from './services/api/apiSlice';
+import { courseApiSlice } from './services/api/courseApiSlice';
 
 
 export const configureCombinedStore = () => {
@@ -8,13 +9,16 @@ export const configureCombinedStore = () => {
   const Reducer = {
       [apiSlice.reducerPath]:  apiSlice.reducer,
       auth: authReducer,
+      [courseApiSlice.reducerPath]: courseApiSlice.reducer,
+
      
   };
 
   const Middleware = (getDefaultMiddleware : any) => {
       const apiSliceMiddleware = apiSlice.middleware;
-      return getDefaultMiddleware()
-          .concat(apiSliceMiddleware)
+      const courseApiSliceMiddleware = courseApiSlice.middleware;
+
+      return getDefaultMiddleware().concat(apiSliceMiddleware , courseApiSliceMiddleware)
   };
 
   return configureStore({
