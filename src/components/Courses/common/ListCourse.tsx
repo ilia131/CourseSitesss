@@ -1,7 +1,18 @@
 
-import images from "../../assets/landingpng"
+import images from "../../../assets/landingpng"
 
-const ListCourse=({price, teacher, student , title , duration})=>{
+interface Course {
+   courseId: string;
+   tumbImageAddress: string;
+   title: string;
+   price: number;
+   teacher:string
+   duration: string;
+   currentUserRateNumber: number;
+   student:string
+   
+}
+const ListCourse=({price, teacher, student , title , duration}: Course)=>{
     return(
         <div className="lg:w-[80%] xl:w-[100%] ij:w-[90%] cd:w-[87%] 
          md:w-[80%] md:left-[100px] sm:w-[70%] sm:left-[150px] cd:left-[110px] ij:left-[80px] relative 
@@ -22,11 +33,11 @@ const ListCourse=({price, teacher, student , title , duration})=>{
               <div className=' gap-[7px] mb-24 relative bottom-[22px] op:bottom-6  hidden uv:grid'>
                  
                  <div className='flex items-center  ml-[10px] gap-[3px]'>
-                    <img src={images.stars} width={15} height={15}/>
-                    <img src={images.stars} width={15} height={15}/>
-                    <img src={images.stars} width={15} height={15}/>
-                    <img src={images.stars} width={15} height={15}/>
-                    <img src={images.star1} width={15} height={15}/>
+                    <img src={images.stars} width={15} height={15} alt='star'/>
+                    <img src={images.stars} width={15} height={15} alt='star'/>
+                    <img src={images.stars} width={15} height={15} alt='star'/>
+                    <img src={images.stars} width={15} height={15} alt='star'/>
+                    <img src={images.star1} width={15} height={15} alt='star'/>
 
                  
                  </div>
@@ -34,15 +45,30 @@ const ListCourse=({price, teacher, student , title , duration})=>{
               <div className='grid gap-[0px] mt-0 uv:mt-[10px] justify-end justify-items-end uv:ml-0 ml-[125px]'>
                  <div className='flex items-center  mr-[17px] gap-[7.7px] '>
                      <p className='text-[16px] text-[#888888]'>{teacher}</p>
-                     <img src={images.profile1} width={16.31} height={17}/>
+                     <img  
+                         src={images.profile1} 
+                         width={16.31} 
+                         height={17}
+                         alt="profile"
+                         />
                  </div>
                  <div className='flex items-center   mr-[19px] uv:mt-2 h-[16px] gap-[7.7px]'>
                      <p className='text-[15px] text-[#888888] '>{duration}</p>
-                     <img src={images.time} width={12} height={12} />
+                     <img 
+                         src={images.time} 
+                         width={12} 
+                         height={12}
+                         alt='time'
+                         />
                  </div>
                  <div className='flex items-center  mr-[18px] mb-12 uv:mb-4 gap-[3px]'>
                     <p className='text-[16px] text-[#888888]' >{student}</p>                    
-                    <img src={images.hat} width={15} height={15} />
+                    <img  
+                      src={images.hat} 
+                      width={15} 
+                      height={15} 
+                      alt="hat"
+                      />
 
                  </div>
               </div>
@@ -55,18 +81,17 @@ const ListCourse=({price, teacher, student , title , duration})=>{
                  <p  className='text-[17px] uv:text-[20px] op:text-[23px] text-[#006865] mt-[-2px] '>{price}</p>
                </div>
                <div className='mt-[3px] op:ml-2 relative uv:right-0 right-6' >
-                  <img src={images.buyit} width={21.9} height={23} />
+                  <img src={images.buyit} width={21.9} height={23} alt='start'/>
                </div>
                
             </div>
             </div>                    
                     
                     
-                     <div className='w-[233px] h-[120px] uv:h-[150px] sm:h-[200px] 
-         
-         flex justify-center items-center bg-gradient-to-r from-[#A259FF] to-[#D47300]
-         rounded-[10px] z-[0] '>
-         <img src={images.figmaicons} width={80} height={80} />
+                     <div className='w-[233px] h-[120px] 
+                         uv:h-[150px] 
+                          sm:h-[200px] flex justify-center items-center bg-gradient-to-r from-[#A259FF] to-[#D47300] rounded-[10px] z-[0] '>
+            <img src={images.figmaicons} width={80} height={80} alt='figmaicons' />
        </div>
 
         </div>

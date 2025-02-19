@@ -16,8 +16,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
    
     <DarkModeProvider>
              <Toaster />
-             <Provider store={store}>
-              <RouterProvider  router={router}  />
+              <Provider store={store}>
+                 <RouterProvider  router={router}  />
               </Provider> 
      </DarkModeProvider>
    

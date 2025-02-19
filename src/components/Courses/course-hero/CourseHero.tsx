@@ -1,6 +1,6 @@
-import SearchForm from '../../components/common/SearchForm/SearchForm'
-import { formStyle, inputStyle, inputdivStyle } from './tailwindstyles';
-import SectionTitle from '../../components/common/SectionTitle/SectionTitle'
+import SearchForm from '../../../components/common/SearchForm/SearchForm'
+import { formStyle, inputStyle, inputdivStyle } from '../tailwindstyles';
+import SectionTitle from '../../../components/common/SectionTitle/SectionTitle'
 
 
 const CourseHero  = () => {

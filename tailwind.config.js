@@ -15,9 +15,6 @@ export default {
 
   darkMode :'class',
   theme: {
-
-
-
     extend: {
 
       colors:{
@@ -35,8 +32,6 @@ export default {
                  
       },
       backgroundImage: {
-
-  
         'NewsBg': "url('./src/assets/img/News/mainBg.png)",
         'podcast': "url('./src/assets/landingpng/Rectangle-35.png')",
         'footerbg': "url('./src/assets/landingpng/Rectangle-141.png')",
@@ -57,12 +52,8 @@ export default {
         'smx': '350px',
         'smx2':'400px',
         'smx3':'500px',
-
-         'cd':'850px',
-
         'smx4':'600px',
         'smx5':'1187px',
-
         'laptop': '1024px',
         'desktop': '1280px',
         'ab':'320px',
@@ -90,7 +81,6 @@ export default {
   },
   plugins: [
     require('daisyui'),
-
     flowbite.content(),
   ],
 }

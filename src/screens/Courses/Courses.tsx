@@ -1,7 +1,6 @@
 import { Fragment } from "react/jsx-runtime"
-import CourseHero from "../../components/Courses/CourseHero"
-import FilterComponent from "../../components/Courses/FilterComponent"
-import CoursesDisplay from "../../components/Courses/CoursesDisplay"
+import CourseHero from "../../components/Courses/course-hero/CourseHero"
+import CoursesDisplay from "../../components/Courses/allCourses/CoursesDisplay"
 
 
 const Courses = () => {

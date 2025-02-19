@@ -73,6 +73,10 @@ const router = createBrowserRouter([
           path:'/news-Detail/:id',
           element:<NewsDetail />,
           errorElement: <Error/> ,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
         }
       ]
     },
@@ -112,10 +116,7 @@ const router = createBrowserRouter([
       ),
       errorElement: <Error />,
     },
-    {
-      path: "*",
-      element: <NotFound />,
-    }
+    
 ])
 
 export default router;

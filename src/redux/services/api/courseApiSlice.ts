@@ -1,4 +1,4 @@
-import {  createApi ,  fetchBaseQuery  } from '@reduxjs/toolkit/query/react'
+import {  createApi } from '@reduxjs/toolkit/query/react'
 import apiInterceptor from '../interceptor';
 
 
@@ -8,12 +8,6 @@ export const courseApiSlice = createApi({
     reducerPath: 'courseApi',
     baseQuery: apiInterceptor,
     endpoints: builder => ({
-        getAllCourses: builder.query({
-            query: () => ({
-                url: '/Home/GetCoursesWithPagination?RowsOfPage=1000',
-            }),
-        }),
-    
         getTechnologyFilter: builder.query({
             query: () => ({
                 url: '/Home/GetTechnologies',
@@ -26,18 +20,23 @@ export const courseApiSlice = createApi({
             }),
         }), 
         
-        getCourseByTechnoloy: builder.query({
-            query: ({ techcount, count }: { techcount: number; count: any }) => ({
-                url: `/Home/GetCoursesWithPagination?TechCount=${techcount}&ListTech=${count}`,
+        getTypeFilter: builder.query({
+            query: () => ({
+                url: '/CourseType/GetCourseTypes',
             }),
-          }),      
+        }), 
+        getCourseByTechnologyandTypeandLevel: builder.query({
+            query: ({apiParams}) => ({
+               url: `/Home/GetCoursesWithPagination?RowsOfPage=10000&${apiParams}`
+           }),
+        }),        
     }),
   });
   
 export const { 
-    useGetAllCoursesQuery, 
     useGetTechnologyFilterQuery, 
-    useGetCourseByTechnoloyQuery, 
     useGetLevelFilterQuery, 
+    useGetTypeFilterQuery,
+    useGetCourseByTechnologyandTypeandLevelQuery,
 } = courseApiSlice;
   
