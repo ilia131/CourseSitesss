@@ -11,9 +11,8 @@ export default function Calender({value, onChange}) {
      <div className="w-full 
           pl-[12px]
           pr-[19px]
-          h-[36px]
-                                        bg-transparent
-
+          h-[36px]       
+          bg-transparent
           flex items-center justify-between "
           onClick={() => datePickerRef.current.openCalendar()}
    >

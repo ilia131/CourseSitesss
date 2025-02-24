@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import "./index.css";
 import {store} from './redux/store'
 import router from './config/router/router';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -13,12 +15,10 @@ import router from './config/router/router';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render( 
-   
     <DarkModeProvider>
-             <Toaster />
+             <ToastContainer />
               <Provider store={store}>
                  <RouterProvider  router={router}  />
               </Provider> 
-     </DarkModeProvider>
-   
+     </DarkModeProvider>  
 )

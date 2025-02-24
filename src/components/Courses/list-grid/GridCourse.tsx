@@ -43,7 +43,8 @@ const GridCourse: React.FC<CourseListProps> = ({ courses , isLoading , isFetchin
 
   return (
   
-    <div className={clsx("w-[918px] h-[1100px] grid grid-cols-3 gap-x-[50px] font-primaryMedium", courses.length < 7 ? 'h-[800px]' : '')}>
+    <div className={clsx("w-[918px] h-[1100px] grid grid-cols-3 gap-x-[50px] font-primaryMedium",
+     courses.length < 7 ? 'h-[800px]' : '' , '')}>
       {courses.map((item: Course, index: number) => (
         <SliderCard
           key={item.courseId}

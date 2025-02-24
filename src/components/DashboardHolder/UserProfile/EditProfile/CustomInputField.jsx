@@ -1,5 +1,5 @@
 import { Field, ErrorMessage } from "formik";
-import Calender from '../../../../screens/Dashboard/UserProfile/Calender1'
+import Calender from './Calender1'
 
 const CustomInputField = ({ field , setFieldValue}) => {
     const { name, type, placeholder, label, as, options } = field

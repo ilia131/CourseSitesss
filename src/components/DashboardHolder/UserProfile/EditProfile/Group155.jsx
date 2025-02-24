@@ -1,6 +1,6 @@
 import { Fragment , useState } from 'react'
 import ImageField1 from '../../Dashboard/ImageField1'
-import MapReact1 from '../../Dashboard/MapReact1'
+import MapReact1 from './MapReact1'
 import { Field , ErrorMessage} from 'formik'
 const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChange , handleImageClick
     ,setFieldValue , userInfo , setRefetch 
@@ -11,14 +11,8 @@ const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChang
 
   return (
     <Fragment>
-         <div className='xl:w-[308px] xl:h-[604px] 
-                       justify-center flex-col justify-items-center
-                       '>
-                               <div className='xl:w-[308px] grid justify-center
-                                  justify-items-center
-                                '
-                                style={{direction:'ltr'}}
-                                >
+         <div className='xl:w-[308px] xl:h-[604px] justify-center flex-col justify-items-center'>
+                               <div className='xl:w-[308px] grid justify-center justify-items-center' dir='ltr'>
                                  <ImageField1 previewImage={previewImage} 
                                             handleImageClick={handleImageClick} 
                                             handleFileChange={handleFileChange} 
@@ -47,15 +41,12 @@ const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChang
                                             placeholder:font-primaryMedium
                                             placeholder:text-[#005351]
                                             placeholder:pt-[5px]
-                                            placeholder:pl-[14px]
-                                            placeholder:pr-[17px]
-                                            '
-                                            style={{direction:'rtl'}}
+                                            placeholder:pl-[14px] placeholder:pr-[17px]'
+                                            dir='rtl'
                                           />
                                             <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800
                                             max-md:w-[150px]
                                             "
-                                            // style={{borderColor:bgColor}}
 
                                             >
                                                 <ErrorMessage name="َUserAbout" component="div" 
@@ -71,7 +62,7 @@ const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChang
                                     //  handleMapClick={handleMapClick}
                                      />
                                    
-                                         <div className='xl:w-[277px] h-[35px]
+                                    <div className='xl:w-[277px] h-[35px]
                                          max-smx3:gap-[20px]
                                          max-md:gap-[20px]
                                          max-lg:gap-[20px]
@@ -97,14 +88,8 @@ const Group155 = ({previewImage , setPreviewImage, fileInputRef ,handleFileChang
                                             <button  className='xl:w-[152px] 
                                             max-smx3:w-[100px]
                                             max-md:w-[130px]
-                                            max-lg:w-[130px]
-                                            max-xl:w-[150px]
-                                            max-smx3:gap-[4px]
-                                            h-[35px] flex justify-center gap-[12px]
-                                              rounded-[25px] bg-[#00E0DB] items-center'
-                                              type='submit'
-                                              >         
-                                                <span className='mt-[-0.5px]' >
+                                            max-lg:w-[130px] max-xl:w-[150px] max-smx3:gap-[4px] h-[35px] flex justify-center gap-[12px] rounded-[25px] bg-[#00E0DB] items-center' type='submit'>         
+                                              <span className='mt-[-0.5px]' >
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                     <path d="M5.99316 16.5V14.25C5.99316 12.8358 5.99316 12.1287 6.43239 11.6894C6.87162 11.25 7.57856 11.25 8.99239 11.25C10.4062 11.25 11.1131 11.25 11.5524 11.6894C11.9916 12.1287 11.9916 12.8358 11.9916 14.25V16.5" stroke="#003B39" stroke-width="1.5" stroke-linejoin="round"/>
                                                     <path d="M7.49316 5.25H10.4924" stroke="#003B39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

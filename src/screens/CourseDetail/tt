@@ -87,11 +87,7 @@ const CourseDetail = () => {
   
   return (
     <>
-   <div dir="rtl" className="  font-['BYekan'] bg-[#F9F9F9] dark:bg-gray-800 "
-                // style={{ backgroundColor: bgColor }}
-
-   >
-     
+   <div dir="rtl" className="  font-['BYekan'] bg-[#F9F9F9] dark:bg-gray-800 ">  
      <div id="ADS" className=" h-[395px] max-sm:h-fit w-[81.3%] max-xl:w-[90%] max-cd:w-[97%] max-md:w-[100%]  mx-auto flex max-sm:flex-col-reverse gap-[29px] max-cd:gap-[15px] max-md:gap-[5px] pt-[35px]" >
        <Top
         detail={detail}

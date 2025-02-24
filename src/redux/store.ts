@@ -6,6 +6,8 @@ import { courseApiSlice } from './services/api/courseApiSlice';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import accordionReducer from './features/accordionSlice'
 import cardViewReducer from './features/courseViewSlice'
+import sidebarfilterReducer from './features/sidbarfilterSlice'
+
 
 export const configureCombinedStore = () => {
    
@@ -16,6 +18,7 @@ export const configureCombinedStore = () => {
       filters: filtersReducer,
       accordion: accordionReducer,
       cardView: cardViewReducer,
+      sideBarfilter: sidebarfilterReducer,
   };
 
   const Middleware = (getDefaultMiddleware : any) => {

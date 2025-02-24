@@ -18,6 +18,7 @@ interface Props {
   radioCheckType:string;
   transFormeddata: FilterItem[];
   isLoadingLevel: boolean
+  handleSideBar: ()=> void
 }
 
 
@@ -28,6 +29,7 @@ const FilterComponent = ({
   radioCheckType,
   transFormeddata,
   isLoadingLevel,
+  handleSideBar,
   
 }: Props) => {  
   if (isLoadingLevel) {
@@ -37,7 +39,7 @@ const FilterComponent = ({
     }
   return (
     <div className="h-[880px] w-[311px]   flex flex-col px-[20px] gap-y-[2px]">
-         <FilterOptions />
+         <FilterOptions handleSideBar={handleSideBar} />
           {transFormeddata.map((section, index) => (
                 <CheckBoxComponent 
                     key={index} 

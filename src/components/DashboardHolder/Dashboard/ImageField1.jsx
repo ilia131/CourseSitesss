@@ -4,9 +4,7 @@ import {Form , Formik , Field , ErrorMessage} from 'formik'
 import { AddProfileImage, SelectProfileImage } from '../../../core/services/api/user';
 import toast from 'react-hot-toast';
 
-const ImageField1 = ({previewImage ,  handleFileChange , fileInputRef , setPreviewImage , userInfo , setRefetch
-
-}) => {
+const ImageField1 = ({previewImage ,  handleFileChange , fileInputRef , setPreviewImage , userInfo , setRefetch}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [previewImage1 , setPreviewImage1] = useState(images.profilepic)
     const [confirmedImage, setConfirmedImage] = useState(null);
@@ -127,12 +125,7 @@ const ImageField1 = ({previewImage ,  handleFileChange , fileInputRef , setPrevi
             </Field>
               </Form>
             </Formik >
-            <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800
-                                            max-md:w-[150px]
-                                            "
-                                            // style={{borderColor:bgColor}}
-
-                                            >
+            <div className="h-[10px] border border-[#FFFFFF] dark:border-gray-800 max-md:w-[150px]">
                     <ErrorMessage name="img" component="div" 
                             className="text-red-500 font-primaryMedium text-sm truncate" />
                     </div> 
